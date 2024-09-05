@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception_Serialization", "Exception_Serialization\Exception_Serialization.csproj", "{FC422D7E-15F3-45B8-8828-315AF664B80D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca_de_Clases", "Biblioteca_de_Clases\Biblioteca_de_Clases.csproj", "{EEC904E9-BAFD-48DC-AB6C-9229A75D86EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC422D7E-15F3-45B8-8828-315AF664B80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC422D7E-15F3-45B8-8828-315AF664B80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC422D7E-15F3-45B8-8828-315AF664B80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC422D7E-15F3-45B8-8828-315AF664B80D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC904E9-BAFD-48DC-AB6C-9229A75D86EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC904E9-BAFD-48DC-AB6C-9229A75D86EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC904E9-BAFD-48DC-AB6C-9229A75D86EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC904E9-BAFD-48DC-AB6C-9229A75D86EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA6C2810-6E70-4668-8898-FF6FFA32A454}
+	EndGlobalSection
+EndGlobal
