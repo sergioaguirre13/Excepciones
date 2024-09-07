@@ -1,4 +1,6 @@
 ﻿using Biblioteca_de_Clases;
+using System.Text.Json;
+using System.Xml.Serialization;
 
 
 namespace Exception_Serialization
@@ -8,23 +10,56 @@ namespace Exception_Serialization
         static void Main(string[] args)
         {
             Estudiante e1 = new Estudiante(2004, "Sergio", "Aguirre", new List<string>() { "Programación", "Matematicas", "Ingles" });
+
+            Estudiante e2;
+
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string nombreFile = "estudiante.txt";
-            string pathCompleto = $@"{path}\{nombreFile}";
+            string nombreFileTxt = "estudiante.txt";
+            string nombreFileJson = "estudiante.json";
+            string nombreFileXml = "estudiante.xml";
+
+            string pathCompletoT = $@"{path}\{nombreFileTxt}";
+            string pathCompletoJ = $@"{path}\{nombreFileJson}";
+            string pathCompletoX = $@"{path}\{nombreFileXml}";
+
 
             string lectura;
 
-            using(StreamWriter writer = new StreamWriter(pathCompleto)) //Si el append (dentro de las propiedades del StreamWriter) esta en TRUE permite seguir escribiendo (seguido) dentro del mismo archivo.
+            e1.EscribirTxt(pathCompletoT);
+
+            using (StreamWriter writer = new StreamWriter(pathCompletoX))
             {
-                writer.WriteLine(e1);
+                XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
+                serializer.Serialize(writer, e1);
             }
 
-            using(StreamReader reader = new StreamReader(pathCompleto))
+            using (StreamReader reader = new StreamReader(pathCompletoX))
             {
-                lectura = reader.ReadToEnd();
+                XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
+                e2 = serializer.Deserialize(reader) as Estudiante;
             }
 
-            Console.WriteLine(lectura);
+            Console.WriteLine(e2);
+
+            Console.WriteLine("-------------------------------------------------------");
+
+
+
+            using (StreamWriter writer = new StreamWriter(pathCompletoJ))
+            {
+                string data = JsonSerializer.Serialize(e1);
+
+                writer.WriteLine(data);
+            }
+
+            using (StreamReader reader = new StreamReader(pathCompletoJ))
+            {
+                string data = reader.ReadToEnd();
+                e2 = JsonSerializer.Deserialize<Estudiante>(data);
+            }
+
+            Console.WriteLine(e2);
+
         }
     }
 }
