@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Exception_Serialization/1.0.0": {
+        "dependencies": {
+          "Biblioteca_de_Clases": "1.0.0"
+        },
+        "runtime": {
+          "Exception_Serialization.dll": {}
+        }
+      },
+      "Biblioteca_de_Clases/1.0.0": {
+        "runtime": {
+          "Biblioteca_de_Clases.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exception_Serialization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Biblioteca_de_Clases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

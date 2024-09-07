@@ -1,0 +1,12 @@
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.AssemblyInfoInputs.cache
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.AssemblyInfo.cs
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.csproj.CoreCompileInputs.cache
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.sourcelink.json
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\bin\Debug\net8.0\Biblioteca_de_Clases.deps.json
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\bin\Debug\net8.0\Biblioteca_de_Clases.dll
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\bin\Debug\net8.0\Biblioteca_de_Clases.pdb
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.dll
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\refint\Biblioteca_de_Clases.dll
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\Biblioteca_de_Clases.pdb
+C:\Users\Sergio PC\Desktop\Excepciones\Exception_Serialization\Biblioteca_de_Clases\obj\Debug\net8.0\ref\Biblioteca_de_Clases.dll
