@@ -26,39 +26,41 @@ namespace Exception_Serialization
             string lectura;
 
             e1.EscribirTxt(pathCompletoT);
+            e1.EscribirJson(pathCompletoJ);
+            e1.EscribirXml(pathCompletoX);
 
-            using (StreamWriter writer = new StreamWriter(pathCompletoX))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
-                serializer.Serialize(writer, e1);
-            }
+            //using (StreamWriter writer = new StreamWriter(pathCompletoX))
+            //{
+            //    XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
+            //    serializer.Serialize(writer, e1);
+            //}
 
-            using (StreamReader reader = new StreamReader(pathCompletoX))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
-                e2 = serializer.Deserialize(reader) as Estudiante;
-            }
+            //using (StreamReader reader = new StreamReader(pathCompletoX))
+            //{
+            //    XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
+            //    e2 = serializer.Deserialize(reader) as Estudiante;
+            //}
 
-            Console.WriteLine(e2);
+            //Console.WriteLine(e2);
 
-            Console.WriteLine("-------------------------------------------------------");
+            //Console.WriteLine("-------------------------------------------------------");
 
 
 
-            using (StreamWriter writer = new StreamWriter(pathCompletoJ))
-            {
-                string data = JsonSerializer.Serialize(e1);
+            //using (StreamWriter writer = new StreamWriter(pathCompletoJ))
+            //{
+            //    string data = JsonSerializer.Serialize(e1);
 
-                writer.WriteLine(data);
-            }
+            //    writer.WriteLine(data);
+            //}
 
-            using (StreamReader reader = new StreamReader(pathCompletoJ))
-            {
-                string data = reader.ReadToEnd();
-                e2 = JsonSerializer.Deserialize<Estudiante>(data);
-            }
+            //using (StreamReader reader = new StreamReader(pathCompletoJ))
+            //{
+            //    string data = reader.ReadToEnd();
+            //    e2 = JsonSerializer.Deserialize<Estudiante>(data);
+            //}
 
-            Console.WriteLine(e2);
+            //Console.WriteLine(e2);
 
         }
     }
