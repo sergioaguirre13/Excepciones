@@ -10,57 +10,51 @@ namespace Exception_Serialization
         static void Main(string[] args)
         {
             Estudiante e1 = new Estudiante(2004, "Sergio", "Aguirre", new List<string>() { "Programación", "Matematicas", "Ingles" });
-
             Estudiante e2;
+
+            Auto v1 = new Auto(3500, "azul", "fiat");
+            Auto v2;
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string nombreFileTxt = "estudiante.txt";
             string nombreFileJson = "estudiante.json";
             string nombreFileXml = "estudiante.xml";
-
-            string pathCompletoT = $@"{path}\{nombreFileTxt}";
-            string pathCompletoJ = $@"{path}\{nombreFileJson}";
-            string pathCompletoX = $@"{path}\{nombreFileXml}";
-
+            string fileAutoJson = "auto.json";
+            string fileAutoXml = "auto.xml";
+            string fileAutoTxxt = "auto.txt";
 
             string lectura;
+            string lectura2;
 
-            e1.EscribirTxt(pathCompletoT);
-            e1.EscribirJson(pathCompletoJ);
-            e1.EscribirXml(pathCompletoX);
+            MiClaseSerializadoraGenerica<Auto>.Escribir(path, fileAutoTxxt, v1.ToString());
+            lectura2 = MiClaseSerializadoraGenerica<Auto>.LeerTxt(path,fileAutoTxxt);
+            Console.WriteLine(lectura2);
 
-            //using (StreamWriter writer = new StreamWriter(pathCompletoX))
-            //{
-            //    XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
-            //    serializer.Serialize(writer, e1);
-            //}
+            MiClaseSerializadoraGenerica<Auto>.Escribir(path, fileAutoXml, v1);
+            v2 = MiClaseSerializadoraGenerica<Auto>.Leer(path, fileAutoXml);
+            Console.WriteLine(v2);
 
-            //using (StreamReader reader = new StreamReader(pathCompletoX))
-            //{
-            //    XmlSerializer serializer = new XmlSerializer(typeof(Estudiante));
-            //    e2 = serializer.Deserialize(reader) as Estudiante;
-            //}
+            MiClaseSerializadoraGenerica<Auto>.Escribir(path, fileAutoJson, v1);
+            v2 = MiClaseSerializadoraGenerica<Auto>.Leer(path, fileAutoJson);
+            Console.WriteLine(v2);
 
-            //Console.WriteLine(e2);
+            //e1.EscribirTxt(pathCompletoT);
 
-            //Console.WriteLine("-------------------------------------------------------");
+            MiClaseSerializadoraGenerica<Estudiante>.Escribir(path, nombreFileTxt, e1.ToString());
+            lectura = MiClaseSerializadoraGenerica<Estudiante>.LeerTxt(path,nombreFileTxt);
+            Console.WriteLine(lectura);
+
+            //e1.EscribirJson(pathCompletoJ);
+            MiClaseSerializadoraGenerica<Estudiante>.Escribir(path, nombreFileJson, e1);
+            e2 = MiClaseSerializadoraGenerica<Estudiante>.Leer(path, nombreFileJson);
+            Console.WriteLine(e2);
+
+            //e1.EscribirXml(pathCompletoX);
+            MiClaseSerializadoraGenerica<Estudiante>.Escribir(path, nombreFileXml, e1);
+            e2 = MiClaseSerializadoraGenerica<Estudiante>.Leer(path, nombreFileXml);
+            Console.WriteLine(e2);
 
 
-
-            //using (StreamWriter writer = new StreamWriter(pathCompletoJ))
-            //{
-            //    string data = JsonSerializer.Serialize(e1);
-
-            //    writer.WriteLine(data);
-            //}
-
-            //using (StreamReader reader = new StreamReader(pathCompletoJ))
-            //{
-            //    string data = reader.ReadToEnd();
-            //    e2 = JsonSerializer.Deserialize<Estudiante>(data);
-            //}
-
-            //Console.WriteLine(e2);
 
         }
     }

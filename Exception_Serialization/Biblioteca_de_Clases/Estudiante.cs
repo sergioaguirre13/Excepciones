@@ -12,7 +12,7 @@ namespace Biblioteca_de_Clases
     {
         public Estudiante()
         {
-                
+                //es necesario para serialziación
         }
 
         public Estudiante(int legajo, string nombre, string apellido, List<string> materias)
